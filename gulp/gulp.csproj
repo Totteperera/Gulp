@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{366F952C-327F-4446-8516-28F619811114}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gulp</RootNamespace>
+    <AssemblyName>gulp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\src\scss\vendor\foundation-float.css" />
+    <Content Include="UI\src\scss\vendor\foundation-float.min.css" />
+    <Content Include="UI\src\scss\vendor\foundation-prototype.css" />
+    <Content Include="UI\src\scss\vendor\foundation-prototype.min.css" />
+    <Content Include="UI\src\scss\vendor\foundation-rtl.css" />
+    <Content Include="UI\src\scss\vendor\foundation-rtl.min.css" />
+    <Content Include="UI\src\scss\vendor\foundation.css" />
+    <Content Include="UI\src\scss\vendor\foundation.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
+    <Content Include="package.json" />
+    <Content Include="Scripts\foundation.cjs.js" />
+    <Content Include="Scripts\foundation.es6.js" />
+    <Content Include="Scripts\foundation.esm.js" />
+    <Content Include="Scripts\foundation.js" />
+    <Content Include="Scripts\foundation.min.js" />
+    <Content Include="Scripts\foundation.min.js.map" />
+    <Content Include="Scripts\foundation.js.map" />
+    <Content Include="Scripts\foundation.esm.js.map" />
+    <Content Include="Scripts\foundation.es6.js.map" />
+    <Content Include="Scripts\foundation.cjs.js.map" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\helpers\_true.scss" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\helpers\_missing-dependencies.scss" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\functions\_to-list.scss" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\functions\_replace.scss" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\functions\_remove.scss" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\functions\_purge.scss" />
+    <Content Include="UI\src\scss\vendor\_vendor\sassy-lists\stylesheets\functions\_contain.scss" />
+    <Content Include="UI\src\scss\vendor\foundation.min.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\_global.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_xy-grid.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_position.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_layout.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_gutters.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_grid.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_frame.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_collapse.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_classes.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\xy-grid\_cell.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\vendor\normalize.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_value.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_util.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_unit.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_typography.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_selector.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_mixins.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_math.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_flex.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_direction.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_color.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\util\_breakpoint.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\typography\_typography.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\typography\_print.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\typography\_helpers.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\typography\_base.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\typography\_alignment.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\settings\_settings.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_text-utilities.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_text-transformation.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_text-decoration.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_spacing.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_sizing.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_shadow.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_separator.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_rounded.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_rotate.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_relation.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_prototype.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_position.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_overflow.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_list-style-type.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_font-styling.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_display.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_box.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_bordered.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_border-none.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_border-box.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\prototype\_arrow.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_size.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_row.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_position.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_layout.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_gutter.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_grid.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_flex-grid.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_column.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\grid\_classes.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\foundation.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_text.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_select.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_range.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_progress.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_meter.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_label.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_input-group.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_help-text.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_forms.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_fieldset.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_error.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\forms\_checkbox.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_visibility.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_top-bar.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_tooltip.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_title-bar.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_thumbnail.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_tabs.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_table.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_switch.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_sticky.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_slider.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_reveal.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_responsive-embed.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_progress-bar.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_pagination.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_orbit.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_off-canvas.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_menu.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_menu-icon.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_media-object.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_label.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_float.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_flex.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_flex-video.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_dropdown.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_dropdown-menu.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_drilldown.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_close-button.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_card.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_callout.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_button.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_button-group.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_breadcrumbs.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_badge.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_accordion.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\components\_accordion-menu.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-rtl.min.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation-rtl.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation-prototype.min.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation-prototype.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation-float.min.css.map" />
+    <Content Include="UI\src\scss\vendor\foundation-float.css.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\plugins\foundation.abide.js" />
+    <Content Include="Scripts\plugins\foundation.abide.min.js" />
+    <Content Include="Scripts\plugins\foundation.accordion.js" />
+    <Content Include="Scripts\plugins\foundation.accordion.min.js" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.js" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.min.js" />
+    <Content Include="Scripts\plugins\foundation.core.js" />
+    <Content Include="Scripts\plugins\foundation.core.min.js" />
+    <Content Include="Scripts\plugins\foundation.drilldown.js" />
+    <Content Include="Scripts\plugins\foundation.drilldown.min.js" />
+    <Content Include="Scripts\plugins\foundation.dropdown.js" />
+    <Content Include="Scripts\plugins\foundation.dropdown.min.js" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.js" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.min.js" />
+    <Content Include="Scripts\plugins\foundation.equalizer.js" />
+    <Content Include="Scripts\plugins\foundation.equalizer.min.js" />
+    <Content Include="Scripts\plugins\foundation.interchange.js" />
+    <Content Include="Scripts\plugins\foundation.interchange.min.js" />
+    <Content Include="Scripts\plugins\foundation.magellan.js" />
+    <Content Include="Scripts\plugins\foundation.magellan.min.js" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.js" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.min.js" />
+    <Content Include="Scripts\plugins\foundation.orbit.js" />
+    <Content Include="Scripts\plugins\foundation.orbit.min.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.min.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.min.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.js" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.min.js" />
+    <Content Include="Scripts\plugins\foundation.reveal.js" />
+    <Content Include="Scripts\plugins\foundation.reveal.min.js" />
+    <Content Include="Scripts\plugins\foundation.slider.js" />
+    <Content Include="Scripts\plugins\foundation.slider.min.js" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.js" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.min.js" />
+    <Content Include="Scripts\plugins\foundation.sticky.js" />
+    <Content Include="Scripts\plugins\foundation.sticky.min.js" />
+    <Content Include="Scripts\plugins\foundation.tabs.js" />
+    <Content Include="Scripts\plugins\foundation.tabs.min.js" />
+    <Content Include="Scripts\plugins\foundation.toggler.js" />
+    <Content Include="Scripts\plugins\foundation.toggler.min.js" />
+    <Content Include="Scripts\plugins\foundation.tooltip.js" />
+    <Content Include="Scripts\plugins\foundation.tooltip.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.box.js" />
+    <Content Include="Scripts\plugins\foundation.util.box.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.js" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.js" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.js" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.motion.js" />
+    <Content Include="Scripts\plugins\foundation.util.motion.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.nest.js" />
+    <Content Include="Scripts\plugins\foundation.util.nest.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.timer.js" />
+    <Content Include="Scripts\plugins\foundation.util.timer.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.touch.js" />
+    <Content Include="Scripts\plugins\foundation.util.touch.min.js" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.js" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.min.js" />
+    <Content Include="Scripts\what-input.js" />
+    <Content Include="Scripts\what-input.min.js" />
+    <Content Include="UI\build\css\site.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="UI\src\scss\site\StyleSheet1.scss" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.triggers.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.touch.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.touch.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.timer.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.timer.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.nest.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.nest.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.motion.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.motion.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.mediaQuery.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.keyboard.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.imageLoader.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.box.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.util.box.js.map" />
+    <Content Include="Scripts\plugins\foundation.tooltip.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.tooltip.js.map" />
+    <Content Include="Scripts\plugins\foundation.toggler.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.toggler.js.map" />
+    <Content Include="Scripts\plugins\foundation.tabs.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.tabs.js.map" />
+    <Content Include="Scripts\plugins\foundation.sticky.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.sticky.js.map" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.smoothScroll.js.map" />
+    <Content Include="Scripts\plugins\foundation.slider.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.slider.js.map" />
+    <Content Include="Scripts\plugins\foundation.reveal.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.reveal.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveToggle.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveMenu.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.responsiveAccordionTabs.js.map" />
+    <Content Include="Scripts\plugins\foundation.orbit.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.orbit.js.map" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.offcanvas.js.map" />
+    <Content Include="Scripts\plugins\foundation.magellan.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.magellan.js.map" />
+    <Content Include="Scripts\plugins\foundation.interchange.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.interchange.js.map" />
+    <Content Include="Scripts\plugins\foundation.equalizer.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.equalizer.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdownMenu.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdown.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.dropdown.js.map" />
+    <Content Include="Scripts\plugins\foundation.drilldown.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.drilldown.js.map" />
+    <Content Include="Scripts\plugins\foundation.core.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.core.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordionMenu.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordion.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.accordion.js.map" />
+    <Content Include="Scripts\plugins\foundation.abide.min.js.map" />
+    <Content Include="Scripts\plugins\foundation.abide.js.map" />
+    <Content Include="UI\src\scss\main.scss" />
+    <Content Include="UI\src\scss\vendor\foundation-sites\_test.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49717</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49717/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
